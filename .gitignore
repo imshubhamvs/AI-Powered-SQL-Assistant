@@ -2,7 +2,7 @@
 backend/node_modules/
 frontend/node_modules/
 ML_Backend/node_modules/
-
+/script.js
 # Logs
 *.log
 
