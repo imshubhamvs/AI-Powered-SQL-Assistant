@@ -71,9 +71,11 @@ User → Backend → LangChain → LLM → SQL Query → DB → Results → User
 ## 📷 Project Demo
 
 ### **Execution Screenshots**
-| User Query | SQL Generated | Result |
-|------------|--------------|--------|
-| ![User Query](path/to/query_screenshot.png) | ![SQL Generated](path/to/sql_screenshot.png) | ![Result](path/to/result_screenshot.png) |
+
+| ![User Query](path/to/query_scr![WhatsApp Image 2025-08-11 at 00 52 24_46b3d9da](https://github.com/user-attachments/assets/f23891b5-1ce7-4b2e-9946-dba0fab3501d)
+eenshot.png) |![WhatsApp Image 2025-08-11 at 00 50 18_3f77d3d2](https://github.com/user-attachments/assets/4921389b-5d98-4cd9-889c-05128580007a)
+ !![WhatsApp Image 2025-08-11 at 00 29 48_181f2ccc](https://github.com/user-attachments/assets/cd4f8d14-ece9-48cc-b289-29e3a9b23cac)
+
 
 ---
 
