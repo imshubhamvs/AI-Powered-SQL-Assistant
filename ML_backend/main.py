@@ -109,7 +109,7 @@ def create_vector_db(txt_text, dbname):
     vector_db.save_local(dbname)
 
 def send_to_groq(query):
-    client = Groq(api_key="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")
+    client = Groq(api_key)
     completion = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content" : query}],
