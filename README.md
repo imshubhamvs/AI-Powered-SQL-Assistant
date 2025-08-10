@@ -87,19 +87,13 @@ cd ai-sql-assistant
 
 2️⃣ Install Dependencies
 Backend:
-
-bash
-Copy
-Edit
 cd backend
 npm install
-Frontend:
 
-bash
-Copy
-Edit
+Frontend:
 cd frontend
 npm install
+
 3️⃣ Set Environment Variables
 Create a .env file in the backend directory:
 
@@ -112,15 +106,11 @@ DB_PASSWORD=your_password
 DB_NAME=your_database
 
 4️⃣ Start the Backend
-bash
-Copy
-Edit
+
 cd backend
 npm run dev
 5️⃣ Start the Frontend
-bash
-Copy
-Edit
+
 cd frontend
 npm start
 🔮 Future Improvements
@@ -128,13 +118,3 @@ npm start
 Fine-tuned model for domain-specific queries.
 
 Export results to Excel/CSV.
-
-
----
-
-If you want, I can now **add a professional architecture diagram** for this README so it looks visually appealing and explains your system flow at a glance.  
-
-Do you want me to add that diagram now?
-
-
-**Flow Diagram**:
