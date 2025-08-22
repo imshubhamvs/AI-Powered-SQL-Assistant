@@ -20,7 +20,8 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-small-en")
+
 
 mysql_connections = {}
 trino_connections = {}
