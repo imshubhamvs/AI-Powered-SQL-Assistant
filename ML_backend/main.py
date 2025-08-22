@@ -200,10 +200,26 @@ def get_schema_for_table(conn, database, table):
     """Fetch column names and types for a given table."""
     cursor = conn.cursor()
     cursor.execute(f"""
-        SELECT column_name, data_type 
-        FROM information_schema.columns 
-        WHERE table_schema = '{database}' 
-        AND table_name = '{table}'
+            SELECT 
+      c.table_name,
+      GROUP_CONCAT(
+        CONCAT(
+          c.column_name, ' (', c.data_type, ')',
+          IF(k.constraint_name IS NOT NULL, CONCAT(' [', k.constraint_name, ']'), ''),
+          IF(k.referenced_table_name IS NOT NULL, 
+             CONCAT(' -> ', k.referenced_table_name, '(', k.referenced_column_name, ')'),
+             ''
+          )
+        )
+        SEPARATOR ', '
+      ) AS column_details
+    FROM information_schema.columns c
+    LEFT JOIN information_schema.key_column_usage k
+      ON c.table_schema = k.table_schema 
+     AND c.table_name = k.table_name 
+     AND c.column_name = k.column_name
+    WHERE c.table_schema = '{database}'
+    GROUP BY c.table_name;
     """)
     schema = {row[0]: row[1] for row in cursor.fetchall()}
     cursor.close()
